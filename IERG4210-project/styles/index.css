@@ -1,0 +1,236 @@
+.breadcrumb { 
+  font-size: 16px; 
+  margin-left: 10px;
+  font-weight: bold;
+} 
+/* 超連結樣式 */ 
+.breadcrumb a { 
+  text-decoration: none; /* 添加下劃線 */ 
+  color: #007bff; /* 設置顏色 */ 
+  cursor: pointer; /* 設置光標為手形 */ 
+} /* 懸停樣式 */ 
+
+.breadcrumb a:hover { 
+  color: #0056b3; /* 懸停時顏色變深 */ 
+  text-decoration: underline;
+}
+
+.shopping-list-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 默认显示的购物列表标题 */
+.shopping-list-summary {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+/* 隐藏的购物列表详情 */
+.shopping-list-details {
+  display: none; /* 默认隐藏 */
+  position: absolute;
+  top: 100%; /* 放在标题下方 */
+  left: 0;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* 鼠标悬停时显示购物列表详情 */
+.shopping-list-container:hover .shopping-list-details {
+  display: block;
+}
+
+.shopping-list-details p {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: 18px;
+}
+
+/* 购物列表的样式 */
+.shopping-list-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+.shopping-list-details li {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* 结算按钮的样式 */
+.checkout-button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.checkout-button:hover {
+  background-color: #0056b3;
+}
+
+.products-grid {
+  display: grid;
+
+  /* - In CSS Grid, 1fr means a column will take up the
+       remaining space in the grid.
+     - If we write 1fr 1fr ... 1fr; 8 times, this will
+       divide the grid into 8 columns, each taking up an
+       equal amount of the space.
+     - repeat(8, 1fr); is a shortcut for repeating "1fr"
+       8 times (instead of typing out "1fr" 8 times).
+       repeat(...) is a special property that works with
+       display: grid; */
+  grid-template-columns: repeat(8, 1fr);
+}
+
+/* @media is used to create responsive design (making the
+   website look good on any screen size). This @media
+   means when the screen width is 2000px or less, we
+   will divide the grid into 7 columns instead of 8. */
+@media (max-width: 2000px) {
+  .products-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media (max-width: 1600px) {
+  .products-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .products-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-container {
+  padding-top: 40px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  /* Images will overflow their container by default. To
+    prevent this, we set max-width and max-height to 100%
+    so they stay inside their container. */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-name {
+  height: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.product-name:hover{
+  text-decoration: underline;
+}
+
+.product-price {
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.product-quantity-container {
+  margin-bottom: 17px;
+}
+
+.product-spacer {
+  flex: 1;
+}
+
+.added-to-cart {
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  /* At first, the "Added to cart" message will
+     be invisible. Use JavaScript to change the
+     opacity and make it visible. */
+  opacity: 0;
+}
+
+.added-to-cart img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+}

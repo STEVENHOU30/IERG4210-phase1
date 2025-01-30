@@ -1,0 +1,26 @@
+.sidebar {
+  font-size: 13px;
+  font-weight: bold;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  top: 70px;
+  background-color: white;
+  z-index: 200;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.categories:hover {
+  background-color: lightgray;
+}

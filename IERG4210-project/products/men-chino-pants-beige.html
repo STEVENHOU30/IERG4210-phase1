@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>myShop</title>
+    <!-- 响应式设计、字体、CSS 等引入 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/general.css"/>
+    <link rel="stylesheet" href="../styles/shop-header.css"/>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/shop-sidebar.css">
+    <link rel="stylesheet" href="../styles/shopping-list.css">
+    <link rel="stylesheet" href="../styles/products.css">
+  </head>
+  <body>
+    <!-- 头部区域 --> 
+     <nav>
+    <header class="shop-header">
+      <!-- 如果想把顶部链接与搜索也视作导航，可包裹在 <nav> 中 -->
+     
+        <!-- 左侧 Logo -->
+        <div class="shop-header-left-section">
+          <a href=" " class="header-link">
+            <img
+              class="shop-logo"
+              src="../images/shop-logo.png"
+              alt="Logo"
+            />
+          </a>
+        </div>
+
+        <!-- 中间搜索栏 -->
+        <div class="shop-header-middle-section">
+          <input class="search-bar" type="text" placeholder="Search for items" />
+          <button class="search-button">
+            <img class="search-icon" src="../icons/search-icon.png"
+            alt="Search Icon">
+          </button>
+        </div>
+
+        <!-- 右侧链接：订单、购物车 -->
+        <div class="shop-header-right-section">
+          <a class="orders-link header-link" href="orders.html">
+            <span class="returns-text">Returns</span>
+            <span class="orders-text">& Orders</span>
+          </a>
+          <a class="cart-link header-link" href="checkout.html">
+            <img
+              class="cart-icon"
+              src="../icons/cart-icon.png"
+              alt="Cart Icon"
+            />
+            <div class="cart-quantity">3</div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 侧边栏或分类导航：用 <nav> + <ul> 来列举类别 -->
+    <nav class="sidebar">
+        <a href="../clothing.html" class="categories">CLOTHING</a>
+        <a href="../accessories.html" class="categories">ACCESSORIES</a>
+        <a href="../food.html" class="categories">FOOD</a>
+        <a href="../household.html" class="categories">HOUSEHOLD</a>
+        <a href="../electronics.html" class="categories">ELECTRONICS</a>
+        <a href="../sports.html" class="categories">SPORTS</a>
+      <!-- 如果还有其他侧边内容，可继续放这里 -->
+    </nav>
+    <!-- 主体内容区域 -->
+    <main>
+      <div class="shopping-list-container">
+        <!-- 购物列表标题 -->
+        <div class="shopping-list-summary">
+          Shopping List $2
+        </div>
+        <!-- 购物列表详情 -->
+        <div class="shopping-list-details">
+          <p>Shopping List (Total: $2.0)</p>
+          <ul>
+            <li>Prod2 [1] @ $1.0</li>
+            <li>Prod3 [2] @ $0.5</li>
+          </ul>
+          <a href="checkout.html" class="checkout-button">[Checkout]</a>
+        </div>
+      </div>
+
+      <nav class="breadcrumb"> 
+        <a href="../index.html">home</a> 
+    > <a href="../clothing.html">clothing</a>
+    > <a>Men-Chino-Pants-Beige</a>
+    </nav>
+
+</nav>
+      
+    <main>
+      <div class="big-products">
+      <div class="big-product-image-container">
+<img src="../product-images/men-chino-pants-beige.jpg" class="big-product-image">
+      </div>
+      <div class="big-product-attribute">
+      <div class="big-product-name">  
+        Men-Chino-Pants-Beige
+      </div>
+
+       <div class="big-product-price">
+         $39.90
+       </div>
+  
+       <div class="big-product-quantity-container">
+         <select class="big-selector">
+           <option selected value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+         </select>
+       </div>
+
+ <button class="big-add-to-cart-button big-button-primary">
+         Add to Cart
+       </button>
+       <ul>
+        Descriptions:
+        <li>
+            Men chino pants in beige are a timeless wardrobe staple that effortlessly transitions from casual to business casual settings.
+        <li>
+            Made from soft, breathable cotton fabric, these pants offer a comfortable fit and freedom of movement throughout the day.
+        </li>
+        <li>
+            The beige color provides a neutral base that pairs well with a variety of tops, making it easy to create polished and stylish outfits.
+        </li>
+       </ul>
+     </div>  
+     </div> 
+    </div>
+    </main>
+
+    <footer>
+      <p>Copyright © 2025 myShop</p>
+    </footer>
+  </body>
+
+</html>
